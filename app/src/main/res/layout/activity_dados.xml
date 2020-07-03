@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/space">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/view_data2"
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:hint="DATA"
+        android:textAlignment="viewStart"
+        android:textColor="#E31B1B"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="144dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/baloo_chettan"
+        android:text="Ativos"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="33dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_data"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/data"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@drawable/moeda"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_valor"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/reall"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/view_quantidade"
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:hint="QUANTIDADE"
+        android:textColor="#E31B1B"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/view_valor"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/view_valor"
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:hint="VALOR"
+        android:textColor="#E31B1B"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="179dp"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/view_data"
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:hint="DATA"
+        android:textAlignment="viewStart"
+        android:textColor="#E31B1B"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/valorizacao"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
