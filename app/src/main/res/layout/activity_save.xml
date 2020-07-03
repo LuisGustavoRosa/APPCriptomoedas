@@ -16,44 +16,45 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         android:textSize="45dp"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="33dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="33dp" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toStartOf="@+id/view_data"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/data"
+        app:srcCompat="@drawable/ic_data"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:srcCompat="@drawable/moeda"
+        app:srcCompat="@drawable/ic_quant"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_width="57dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toStartOf="@+id/view_valor"
-        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/reall"
+        app:srcCompat="@drawable/ic_moeda"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -88,15 +89,16 @@
         android:id="@+id/view_data"
         android:layout_width="315dp"
         android:layout_height="45dp"
+        android:layout_marginTop="33dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto"
         android:hint="DATA"
         android:textAlignment="viewStart"
         android:textColor="#E31B1B"
         android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/view_quantidade"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteX="69dp" />
 
     <Button
         android:id="@+id/button"
@@ -106,7 +108,7 @@
         android:layout_marginBottom="260dp"
         android:background="@drawable/custom_buttom"
         android:fontFamily="@font/baloo_chettan"
-        android:text="CoNFIRMAR"
+        android:text="CONFIRMAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
