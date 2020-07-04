@@ -1,127 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/space">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/view_data3"
-        android:layout_width="315dp"
-        android:layout_height="45dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:hint="VALORIZAÇAO"
-        android:textAlignment="viewStart"
-        android:textColor="#E31B1B"
-        android:textColorHint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="406dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="144dp"
         android:layout_height="70dp"
         android:fontFamily="@font/baloo_chettan"
-        android:text="Dados"
+        android:text="Ativos"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
         android:textSize="45dp"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="33dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="30dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="116dp"
-        app:layout_constraintEnd_toStartOf="@+id/view_data"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_valorizar"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="33dp" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="30dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/view_data"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_data"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="32dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:srcCompat="@drawable/ic_quant"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="57dp"
-        android:layout_height="30dp"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="405dp"
+        android:layout_height="44dp"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="14dp"
-        app:layout_constraintEnd_toStartOf="@+id/view_valor"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_moeda"
-        tools:ignore="MissingConstraints" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/view_quantidade"
-        android:layout_width="315dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:hint="QUANTIDADE"
-        android:textColor="#E31B1B"
-        android:textColorHint="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/view_valor"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp" />
+        tools:layout_editor_absoluteX="3dp">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/view_valor"
-        android:layout_width="315dp"
-        android:layout_height="45dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:hint="VALOR"
-        android:textColor="#E31B1B"
-        android:textColorHint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="179dp"
-        tools:visibility="visible" />
+        <ImageView
+            android:id="@+id/moeda"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_moeda"
+            tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/view_data"
-        android:layout_width="315dp"
-        android:layout_height="45dp"
-        android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto"
-        android:hint="DATA"
-        android:textAlignment="viewStart"
-        android:textColor="#E31B1B"
-        android:textColorHint="@color/white"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/view_valor"
+            android:layout_width="315dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:hint="VALOR"
+            android:textColor="#E31B1B"
+            android:textColorHint="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="405dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageView
+            android:id="@+id/quatidade"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_quant"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/view_quantidade"
+            android:layout_width="315dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:hint="QUANTIDADE NA MOEDA"
+            android:textColor="#E31B1B"
+            android:textColorHint="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="405dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageView
+            android:id="@+id/data"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_data"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/view_data"
+            android:layout_width="315dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:hint="DATA"
+            android:textColor="#E31B1B"
+            android:textColorHint="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="405dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageView
+            android:id="@+id/valorizar"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_valorizar"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/view_valorizacao"
+            android:layout_width="315dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:hint="VALORIZAÇÃO"
+            android:textColor="#E31B1B"
+            android:textColorHint="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
