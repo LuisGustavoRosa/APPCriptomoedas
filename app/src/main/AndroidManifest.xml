@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity-->
-<!--            android:name=".ui."-->
-<!--            android:label="Teste" />-->
+        <activity
+            android:name=".ui.AtivosOp"
+            android:label="Adicionar Ativo"
+            android:theme="@style/AppTheme"/>
     </application>
-
 
 </manifest>

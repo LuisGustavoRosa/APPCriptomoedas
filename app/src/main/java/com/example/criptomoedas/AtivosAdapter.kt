@@ -1,33 +1,54 @@
 package com.example.criptomoedas
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.ap8.criptomoedas.R
-import com.example.criptomoedas.dao.Ativos
+import com.example.criptomoedas.methods.Ativos
+import com.example.criptomoedas.ui.AtivosOp
+import kotlinx.android.synthetic.main.activity_visualizar.view.*
+import kotlinx.android.synthetic.main.activity_visualizar.view.view_data_
+import kotlinx.android.synthetic.main.activity_visualizar.view.view_quantidade_
+import kotlinx.android.synthetic.main.activity_visualizar.view.view_valor_
+import kotlinx.android.synthetic.main.activity_visualizar.view.view_valorizacao_
 import kotlinx.android.synthetic.main.adpater_ativos.view.*
+import java.text.DecimalFormat
 
-
-class AtivosAdapter(private val ativos: List<Ativos>):
+class AtivosAdapter(private val ativos: List<Ativos>, private val valorMoedaAtual: Double?):
     RecyclerView.Adapter<AtivosAdapter.VH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AtivosAdapter.VH {
-        val vh = LayoutInflater
+        val view = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.adpater_ativos, parent,false)
 
-        val vh_ = VH(vh)
+        val vHolder = VH(view)
 
-//        vh_.itemView.setOnClickListener{
-//            val produto= compras[vh.adapterPosition]
-//            val intencao = Intent(parent.context, UpdateActivity::class.java)
-//            intencao.putExtra("compra", produto)
-//            parent.context.startActivity(intencao)
-//        }
+        view.setOnClickListener(View.OnClickListener {
+            val valor = vHolder.viewValor.text.toString()
+                .replace("R$", "")
+                .replace(".", "")
+                .replace(",", ".")
+            val quantidade = vHolder.viewQuantidade.text.toString()
+                .substring(4)
 
-        return vh_
+            val ativo = Ativos(
+                vHolder.idInvisible,
+                vHolder.viewMoeda.text.toString(),
+                quantidade.toDouble(),
+                valor.toDouble(),
+                vHolder.viewData.text.toString()
+            )
+
+            val it = Intent(parent.context, AtivosOp::class.java)
+            it.putExtra("get/del", ativo)
+            it.putExtra("valorizacao", vHolder.viewValorizacao.text.toString())
+            parent.context.startActivity(it)
+        })
+
+        return vHolder
     }
 
     override fun getItemCount(): Int {
@@ -36,16 +57,31 @@ class AtivosAdapter(private val ativos: List<Ativos>):
 
     override fun onBindViewHolder(holder: AtivosAdapter.VH, position: Int) {
         val ativo = ativos[position]
-        //holder.viewMoeda?.text = ativo.moeda
-        holder.viewQuantidade?.text = ativo.quantidade.toString()
-        holder.viewValor?.text = ativo.valor.toString()
-        holder.viewData?.text = ativo.data
+        val valor = DecimalFormat("#,##0.00").format(ativo.valor)
+        val valorizacao = calcularValorizacao(ativo.quantidade, ativo.valor)
+        val valorizacao_ = DecimalFormat("#.##").format(valorizacao)
+
+        holder.idInvisible = ativo.id
+        holder.viewMoeda.text = ativo.moeda.toString()
+        holder.viewQuantidade.text = "${ativo.moeda} ${ativo.quantidade}"
+        holder.viewValorizacao.text = "${valorizacao_}%"
+        holder.viewValor.text = "R$ ${valor}"
+        holder.viewData.text = ativo.data.toString()
     }
 
     class VH(item: View): RecyclerView.ViewHolder(item) {
-        //var viewMoeda: TextView? = item.view
-        var viewQuantidade: TextView? = item.view_quantidade
-        var viewValor: TextView? = item.view_valor
-        var viewData: TextView? = item.view_data
+        var idInvisible: Int? = null
+        var viewMoeda: TextView = item.view_moeda_
+        var viewQuantidade: TextView = item.view_quantidade_
+        var viewValorizacao: TextView = item.view_valorizacao_
+        var viewValor: TextView = item.view_valor_
+        var viewData: TextView = item.view_data_
+    }
+
+    fun calcularValorizacao(valorMoeda: Double, valorReal: Double): Double {
+        val valor = valorMoeda * valorMoedaAtual!!
+        val diferenca = valor - valorReal
+        val resultado = (diferenca * 100) / valorReal
+        return resultado
     }
 }
