@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/space"
     tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/space"
+        tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/total_home"
@@ -42,7 +51,7 @@
         android:id="@+id/constraintLayoutBtc"
         android:layout_width="395dp"
         android:layout_height="85dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="#59595454"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +61,8 @@
         <ImageView
             android:id="@+id/imageBtc"
             android:layout_width="41dp"
-            android:layout_marginTop="8dp"
             android:layout_height="31dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_bitcoin"
             tools:layout_editor_absoluteX="177dp" />
 
@@ -91,64 +100,16 @@
         android:id="@+id/constraintLayoutBhc"
         android:layout_width="395dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="22dp"
-        android:background="#59595454"
-        app:layout_constraintBottom_toTopOf="@+id/recycle_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/imageeth"
-            android:layout_width="41dp"
-            android:layout_height="31dp"
-            android:src="@drawable/ic_ethereum"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="ETHERIUM"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.481"
-            app:layout_constraintStart_toEndOf="@+id/imageeth"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.242" />
-
-        <TextView
-            android:id="@+id/eth_total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/roboto"
-            android:text="R$ 1.200,00"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageeth" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayoutBhc"
-        android:layout_width="395dp"
-        android:layout_height="85dp"
+        android:layout_marginTop="19dp"
         android:background="#59595454"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_msg"
-        tools:ignore="DuplicateIds,MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imagebhc"
+            android:id="@+id/imageeth"
             android:layout_width="41dp"
             android:layout_height="31dp"
             android:src="@drawable/ic_bcash"
@@ -165,13 +126,62 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toEndOf="@+id/imageeth"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.242" />
+
+        <TextView
+            android:id="@+id/bhc_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="R$ 1.200,00"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageeth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutBhc"
+        android:layout_width="395dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="24dp"
+        android:background="#59595454"
+        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        tools:ignore="DuplicateIds,MissingConstraints"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageView
+            android:id="@+id/imagebhc"
+            android:layout_width="41dp"
+            android:layout_height="31dp"
+            android:src="@drawable/ic_litecoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="LITECOIN"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.417"
             app:layout_constraintStart_toEndOf="@+id/imagebhc"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.242" />
 
         <TextView
-            android:id="@+id/bhc_total"
+            android:id="@+id/ltc_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
@@ -184,28 +194,6 @@
             app:layout_constraintTop_toBottomOf="@+id/imagebhc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_home"
-        android:layout_width="413dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:context="de.eazegraph.app.fragments.PieChartFragment"
-        tools:ignore="MissingConstraints,UnknownId"
-        tools:layout_editor_absoluteY="612dp" />
-
-    <TextView
-        android:id="@+id/home_msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_chettan"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText1"
@@ -224,8 +212,8 @@
         android:id="@+id/editText2"
         android:layout_width="395dp"
         android:layout_height="4dp"
-        android:layout_marginTop="19dp"
-        android:background="#666666"
+        android:layout_marginTop="29dp"
+        android:background=" #2ECC71"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -237,32 +225,31 @@
         android:id="@+id/editText3"
         android:layout_width="395dp"
         android:layout_height="4dp"
-        android:layout_marginTop="8dp"
-        android:background="#2ECC71"
+        android:layout_marginTop="32dp"
+        android:background="#345D9D"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayoutLtc"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="9dp" />
+        tools:layout_editor_absoluteX="8dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayoutLtc"
         android:layout_width="395dp"
         android:layout_height="85dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="15dp"
         android:background="#59595454"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp">
 
         <ImageView
             android:id="@+id/imageltc"
             android:layout_width="41dp"
             android:layout_height="31dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/ic_litecoin"
+            android:src="@drawable/ic_ethereum"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -272,7 +259,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
-            android:text="LITECOIN"
+            android:text="ETHERIUM"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.405"
@@ -280,7 +267,7 @@
             tools:layout_editor_absoluteY="16dp" />
 
         <TextView
-            android:id="@+id/ltc_total"
+            android:id="@+id/eth_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -299,12 +286,14 @@
         android:id="@+id/editText4"
         android:layout_width="395dp"
         android:layout_height="4dp"
-        android:background="#345D9D"
+        android:layout_marginTop="38dp"
+        android:background="#666666"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBtc"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="268dp" />
+        tools:layout_editor_absoluteX="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
