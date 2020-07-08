@@ -8,6 +8,7 @@ import com.example.criptomoedas.methods.Ativos
 import com.example.criptomoedas.methods.AtivosMethods
 import kotlinx.android.synthetic.main.activity_save.*
 import kotlinx.android.synthetic.main.activity_visualizar.*
+import java.text.DecimalFormat
 
 class AtivosOp : AppCompatActivity() {
 
@@ -36,9 +37,10 @@ class AtivosOp : AppCompatActivity() {
             })
         } else {
             setContentView(R.layout.activity_visualizar)
+            val valor = DecimalFormat("#,##0.00").format(ativo?.valor)
 
-            view_quantidade_.text = ativo?.quantidade.toString()
-            view_valor_.text = ativo?.valor.toString()
+            view_quantidade_.text = "R$ ${valor}"
+            view_valor_.text = "${ativo?.moeda} ${ativo?.quantidade}"
             view_data_.text = ativo?.data.toString()
             view_valorizacao_.text = valorizacao
 
@@ -49,6 +51,5 @@ class AtivosOp : AppCompatActivity() {
                 finish()
             })
         }
-
     }
 }

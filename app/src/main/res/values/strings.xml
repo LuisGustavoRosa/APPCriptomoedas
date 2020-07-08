@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Crypto Master</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Crypto Master</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="app_name" translatable="false">Crypto Master</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Crypto Master</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Configurações</string>
 
@@ -22,4 +22,8 @@
     <string name="confirmar">CONFIRMAR</string>
     <string name="valoriza_o">VALORIZAÇÃO</string>
     <string name="excluir">Excluir</string>
+    <string name="litecoin">LITECOIN</string>
+    <string name="ethereum">ETHEREUM</string>
+    <string name="bcash">BCASH</string>
+    <string name="bitcoin">BITCOIN</string>
 </resources>
