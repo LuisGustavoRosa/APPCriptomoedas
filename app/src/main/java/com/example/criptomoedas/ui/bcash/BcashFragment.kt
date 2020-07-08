@@ -17,6 +17,7 @@ import com.example.criptomoedas.methods.AtivosMethods
 import com.example.criptomoedas.ui.AtivosOp
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_bcash.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,11 +39,16 @@ class BcashFragment : Fragment() {
         val btn: FloatingActionButton = root.findViewById(R.id.buttonFloating)
         val recycle: RecyclerView = root.findViewById(R.id.recycle_bch)
 
+
+
+
         btn.setOnClickListener(View.OnClickListener {
             val it = Intent(activity, AtivosOp::class.java)
             it.putExtra("moeda", "BCH")
             activity?.startActivity(it)
+
         })
+
         initRecyclerView(recycle)
 
         return root

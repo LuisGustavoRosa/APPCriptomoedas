@@ -18,6 +18,7 @@ import com.example.criptomoedas.methods.Ativos
 import com.example.criptomoedas.methods.AtivosMethods
 import kotlinx.android.synthetic.main.fragment_bitcoin.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.eazegraph.lib.charts.PieChart
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,10 +28,13 @@ class HomeFragment : Fragment() {
     private var listaAtivos = mutableListOf<Ativos>()
     private var total: Double = 0.0
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
     ): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
